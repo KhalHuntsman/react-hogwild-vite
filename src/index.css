@@ -1,152 +1,130 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #fffaf8;
+  color: #3B0B0B;
 }
 
+/* Overall App Container */
 .App {
-  margin: 0% 5% 0% 5%;
+  margin: 0 5%;
   text-align: center;
 }
 
-.TwirlyPig {
-  transition: all 3s ease-in-out;
-  display: inline;
-}
-
-.TwirlyPig:hover {
-  transform: scale(1.5);
-}
-
-.navWrapper {
-  margin-bottom: 2%;
-}
-
-.filterWrapper {
-  margin: 2% 0% 2% 0%;
-}
-
+/* Headers */
 .headerText {
-  color: #F5A9BC;
+  color: #F76C8C;
   font-size: 3em;
-  margin: 0% 2% 0% 2%;
+  margin: 0 2%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .largeHeader {
   font-size: 3.5em;
   font-weight: bold;
   color: #3B0B0B;
+  margin-bottom: 0.5em;
 }
 
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
   color: #3B0B0B;
+  margin-bottom: 0.25em;
 }
 
-.normalText {
-  font-family: Georgia, serif;
-  font-size: .75em;
-}
-
-.hoggyText {
-  font-size: 1.5em;
-}
-
-.achievementText {
-  color: purple;
-}
-
-ul {
-  list-style-type: none;
-  list-style: none;
-}
-
-.normalText ul {
-  font-family: Georgia, serif;
-  font-size: .75em;
-  text-align: left;
-}
-
-.subtleText {
-  color: #D1D1D1;
-  font-size: .75em;
-}
-
-
-.indexWrapper {
-  margin: auto;
-}
-
-
+/* Hog Tile Cards */
 .pigTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  outline: #3B0B0B dotted thick;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.minBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-}
-
-.maxBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-  opacity: 0.75;
-}
-
-.pigTile h3 {
-  color: #FBB;
-}
-
-.minPigTile {
+  display: inline-block;
   width: 250px;
-  height: 250px;
-  background-size: cover;
-}
-
-.maxPigTile {
-  background-size: cover;
-  width: 500px;
-  height: 500px;
+  margin: 1.5%;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #fff;
+  border: 2px solid #F5A9BC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pigTile:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+.pigTile h3 {
+  color: #E85A70;
+  margin-top: 0.5em;
+}
 
-.App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
-  transition: all .2s ease-in-out;
+/* Hog Images */
+.pigTile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/* Hog Details */
+.hogDetails {
+  margin-top: 0.5em;
+  text-align: left;
+  background-color: #fff6f8;
+  padding: 0.75em;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  color: #3B0B0B;
+  border: 1px dashed #F5A9BC;
+}
+
+/* Buttons */
+button {
+  background-color: #F76C8C;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #E85A70;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Footer and Nav */
+.navWrapper {
+  margin-bottom: 2%;
 }
 
 .footer {
   padding: 1%;
   clear: both;
+  font-size: 0.8em;
+  color: #777;
 }
 
+/* Twirly Pig Animation */
+.TwirlyPig {
+  transition: all 3s ease-in-out;
+  display: inline-block;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.TwirlyPig:hover {
+  transform: rotate(20deg) scale(1.3);
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+/* Other utility text */
+.subtleText {
+  color: #aaa;
+  font-size: 0.8em;
 }
